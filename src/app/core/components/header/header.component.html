@@ -1,0 +1,19 @@
+<header class="header_desktop">
+    <mat-toolbar>
+        <span>My App</span>
+        <span class="example-spacer"></span>
+        
+        <div *ngIf="isLoggedOn; else displayButtons">
+            <a href="#"><mat-icon>shopping cart</mat-icon></a>
+        </div>
+
+        <ng-template #displayButtons>
+            <button mat-raised-button >Sign Up</button>
+            <button mat-raised-button><a routerLink="/login" routerLinkActive="active" ariaCurrentWhenActive="page">Log In</a></button>
+        </ng-template>
+
+    </mat-toolbar>
+</header>
+
+<header class="header_mobile">
+</header>
